@@ -1,0 +1,230 @@
+/* 🌌 Global Black Background */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 🌟 3D Glowing Grid Particles */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridFloat 12s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes gridFloat {
+  0% { background-position: 0 0; }
+  50% { background-position: 20px 20px; }
+  100% { background-position: 0 0; }
+}
+
+/* 🔱 Hero Section */
+.hero-container {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  display: inline-block;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+.hero-card:hover {
+  transform: scale(1.03);
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  margin-bottom: 16px;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00ffc3, #00bfff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 24px rgba(0, 255, 255, 0.7);
+  }
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 6px;
+}
+
+.custom-upload {
+  display: inline-block;
+  margin-top: 18px;
+  background: linear-gradient(90deg, #00ffc3, #007cf0);
+  padding: 12px 20px;
+  color: #000;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 🧊 Info/Alert Styling */
+.stAlert, .stSuccess, .stWarning {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00ffe0;
+  border-radius: 12px;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+}
+
+/* ✨ Resume Text Area */
+.stTextArea textarea, textarea, .stTextArea .stTextAreaWidget textarea {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  color: #ffffff !important;
+  border: 1px solid #00cfff !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Also fix placeholder visibility */
+.stTextArea textarea::placeholder {
+  color: #cccccc !important;
+  opacity: 0.6 !important;
+}
+
+/* 🧱 Animated Blocks */
+.block, .animated-block {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.block:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* 🔎 ATS Score Tag */
+.ats-score-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #00ffc3, #00cfff);
+  color: #000;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 16px rgba(0,255,255,0.4);
+}
+
+/* 🧠 Section Heading */
+.section-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00ffe7, #007cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 40px;
+}
+
+/* ✅ Download Button */
+.stDownloadButton > button {
+  background: linear-gradient(90deg, #00ffc3, #00bfff);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: black;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,255,255,0.2);
+}
+.stDownloadButton > button:hover {
+  transform: scale(1.05);
+  background: #00e6ff;
+}
+
+/* 📊 Progress Bar */
+.stProgress > div > div {
+  background: linear-gradient(90deg, #00ffc3, #00aaff) !important;
+  height: 16px;
+  border-radius: 20px;
+}
+
+/* 📥 File Uploader */
+.stFileUploader label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* 🧠 Keyword Section */
+.keyword-section {
+  background: rgba(255,255,255,0.03);
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 12px;
+  color: #ffffff;
+}
+
+/* 📱 Responsive Fixes */
+@media screen and (max-width: 768px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
+  .hero-card {
+    padding: 20px;
+  }
+}
+/* 🛠️ Patch: Fix text area visibility (light bg issue) */
+.stTextArea textarea, .stTextArea div[data-baseweb="textarea"] textarea {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #00cfff !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  box-shadow: inset 0 0 6px rgba(0, 255, 255, 0.2);
+}
+
+/* ✅ Fix also for non-streamlit specific textareas */
+textarea {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #00cfff !important;
+  border-radius: 12px !important;
+}
+
+/* 🧠 Placeholder color fix */
+textarea::placeholder {
+  color: #bbbbbb !important;
+  opacity: 0.7 !important;
+}

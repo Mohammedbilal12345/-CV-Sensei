@@ -1,0 +1,12 @@
+streamlit
+pdfplumber
+PyMuPDF
+python-docx
+fpdf
+unicodedata2
+language-tool-python
+transformers
+sentence-transformers
+scikit-learn
+spacy
+torch
