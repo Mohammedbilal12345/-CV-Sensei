@@ -1,11 +1,6 @@
-Absolutely! Here's a professional, feature-rich **`README.md` for your GitHub project** — suitable for a resume analyzer app like `CV Sensei` or `Resume Insights`.
+# 📄 CV Sensei – AI-Powered Resume Analyzer
 
----
-
-```markdown
-# 📄 CV Sensei – Smart Resume Analyzer
-
-> AI-powered resume analyzer with ATS scoring, keyword extraction, summarization, grammar correction, and job match insights – built with 🧠 NLP + ⚡ Streamlit + 🤖 Hugging Face.
+> An intelligent resume analyzer offering ATS score, job match insights, grammar fixes, keyword analysis & summaries – powered by NLP, Hugging Face, and Streamlit.
 
 ![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-orange?logo=streamlit)
 ![Python](https://img.shields.io/badge/Made%20with-Python-blue?logo=python)
@@ -14,106 +9,110 @@ Absolutely! Here's a professional, feature-rich **`README.md` for your GitHub pr
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- ✅ **Resume Text Extraction** (PDF & DOCX)
-- 🧠 **AI Summarization** (Hugging Face BART / T5 models)
-- ✍️ **Grammar Checker** (LanguageTool API)
-- 🧬 **Keyword Extraction**
-- 📊 **ATS Compatibility Score**
-- 📈 **Job Matching via Cosine Similarity**
-- 📥 **PDF Report Generator**
-- 🎨 Beautiful 3D-glow themed Streamlit UI
-
----
-
-## 🖥️ Demo Preview
-
-![Demo](https://github.com/yourusername/cv-sensei/assets/demo.gif)
+* 📄 **Smart Resume Parsing** (PDF/DOCX)
+* 🧠 **AI Summarization** using Hugging Face models (BART/T5)
+* ✍️ **Grammar Correction** powered by LanguageTool
+* 🎯 **ATS Score Calculation** for job-readiness insights
+* 🔍 **Keyword Extraction & Highlighting**
+* 🤝 **Job Description Matching** via semantic similarity
+* 📥 **Downloadable PDF Report** with feedback
+* ✨ **Sleek Streamlit UI with 3D effects**
 
 ---
 
-## 📂 File Structure
+## 🌐 Live Preview & Demo Screenshots
+
+📍 GitHub Repo: [CV Sensei](https://github.com/Mohammedbilal12345/-CV-Sensei/)
+
+| Upload Resume                                                                              | ATS Score                                                                               | Summary & Keywords                                                                           | Grammar Suggestions                                                                         |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| ![Upload](https://github.com/user-attachments/assets/7568c420-8958-425b-825c-e59fb7a7c2ef) | ![ATS](https://github.com/user-attachments/assets/1b90b00b-e974-4a44-9b82-9375cb44b63f) | ![Keywords](https://github.com/user-attachments/assets/971af84b-1112-44c7-9cd1-71e931704b6b) | ![Grammar](https://github.com/user-attachments/assets/53a51c62-e321-4f1b-ae45-04f35f1701f1) |
+
+---
+
+## 📂 Project Structure
+
+```bash
+📁 CV-Sensei/
+├── 📄 app.py                        # Main Streamlit app script
+├── 📄 grammar_test.py              # Grammar check test script
+├── 📄 README.md                    # Project documentation
+
+├── 📁 .streamlit/
+│   └── 📄 config.toml              # Streamlit configuration
+
+├── 📁 assets/
+│   └── 🖼️ logo.png                 # Project logo
+
+├── 📁 data/
+│   └── 📄 sample_resume.pdf        # Sample resume input
+
+├── 📁 generated_reports/
+│   └── 📄 ats_report.pdf           # Output report PDF
+
+├── 📁 styles/
+│   └── 🎨 custom.css               # Custom 3D glowing UI styles
+
+├── 📁 utils/
+│   ├── 📄 ats_score.py             # Calculates ATS score
+│   ├── 📄 grammar_checker.py      # Grammar correction logic
+│   ├── 📄 pdf_generator.py        # Generates styled PDF reports
+│   ├── 📄 resume_parser.py        # Extracts text from PDF/DOCX
+│   ├── 📄 role_matcher.py         # Job match logic (cosine similarity)
+│   └── 📄 summary_generator.py    # Summarizes resume content using Hugging Face
+
+└── 📁 __pycache__/                # Python cache (auto-generated)
 
 ```
-
-📁 cv-sensei/
-├── app.py                  # Main Streamlit app
-├── utils/
-│   ├── parser.py           # Resume text extraction
-│   ├── summarizer.py       # Hugging Face summarizer logic
-│   ├── grammar.py          # LanguageTool integration
-│   ├── scorer.py           # ATS and job match scoring
-├── output/
-│   └── report.pdf          # Generated user report
-├── assets/                 # Icons, logos
-├── requirements.txt
-└── README.md
-
-
-````
 
 ---
 
 ## 🧠 Tech Stack
 
-| Tool / Library               | Purpose                                                   |
-|-----------------------------|-----------------------------------------------------------|
-| **Streamlit**               | UI Framework for dashboards                               |
-| **pdfplumber / PyMuPDF**    | Resume text extraction from PDF                           |
-| **docx**                    | Extract text from `.docx` resumes                         |
-| **fpdf**                    | Generate downloadable PDF reports                         |
-| **language_tool_python**    | Grammar correction using LanguageTool API                 |
-| **transformers**            | Hugging Face Summarizer (e.g., `facebook/bart-large-cnn`) |
-| **sentence-transformers**   | Semantic similarity embeddings                            |
-| **scikit-learn**            | Cosine similarity for job match scoring                   |
-| **spaCy** (optional)        | NLP preprocessing / Named Entity Recognition              |
-| **torch**                   | Backend for models                                        |
+| Tool / Library            | Role / Purpose                             |
+| ------------------------- | ------------------------------------------ |
+| **Streamlit**             | Frontend UI framework                      |
+| **pdfplumber / PyMuPDF**  | Extract text from PDF resumes              |
+| **python-docx**           | Extract text from DOCX resumes             |
+| **fpdf**                  | PDF report generation                      |
+| **language-tool-python**  | Grammar correction                         |
+| **transformers**          | Text summarization via Hugging Face models |
+| **sentence-transformers** | Job-resume matching via embeddings         |
+| **scikit-learn**          | Cosine similarity & ML utilities           |
+| **torch**                 | Backend for transformer models             |
+| **spaCy** (optional)      | NER, text preprocessing                    |
+| **unicodedata2**          | Handling unicode text from parsed resumes  |
 
 ---
 
-## 📦 Installation
+## ⚙️ Installation & Usage
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/cv-sensei.git
-cd cv-sensei
+# 1. Clone the repository
+$ git clone https://github.com/Mohammedbilal12345/-CV-Sensei.git
+$ cd cv-sensei
 
-# Install dependencies
-pip install -r requirements.txt
+# 2. Install dependencies
+$ pip install -r requirements.txt
 
-# Run the app
-streamlit run app.py
-````
-
----
-
-## ⚙️ Example Usage
-
-1. Upload your resume PDF/DOCX
-
-![image](https://github.com/user-attachments/assets/7568c420-8958-425b-825c-e59fb7a7c2ef)
-
-2. View extracted content & grammar check
-
-![image](https://github.com/user-attachments/assets/53a51c62-e321-4f1b-ae45-04f35f1701f1)
-
-3. Get AI summary and keyword highlights
-
-![image](https://github.com/user-attachments/assets/971af84b-1112-44c7-9cd1-71e931704b6b)
-
-4. See your ATS score and job match insights
-
-![image](https://github.com/user-attachments/assets/1b90b00b-e974-4a44-9b82-9375cb44b63f)
-
-5. Download personalized PDF report
-
-![image](https://github.com/user-attachments/assets/859dad66-ba92-4b98-8a48-f030222c4739)
-
+# 3. Launch the app
+$ streamlit run app.py
+```
 
 ---
 
-## 📄 Requirements
+## 📌 Example Workflow
+
+1. Upload your resume (PDF/DOCX)
+2. View extracted text, grammar feedback & keyword suggestions
+3. Get ATS score and job match percentage
+4. Download AI-generated PDF report
+
+---
+
+## 📜 Requirements
 
 ```txt
 streamlit
@@ -132,32 +131,21 @@ unicodedata2
 
 ---
 
-## 📜 License
+## 📬 Contact & Author
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🤝 Contributing
-
-Got ideas to improve the app? PRs are welcome!
+**👤 Mohammed Bilal**
+📧 [mohammedbilal96654@gmail.com](mailto:mohammedbilal96654@gmail.com)
+🌐 [Portfolio Website](https://mohammedbilal.vercel.app/)
+🔗 [GitHub](https://github.com/Mohammedbilal12345)
 
 ---
 
-## 📬 Contact
+## ⭐ Like this Project?
 
-For queries or collaboration:
-**Mohammed Bilal**
-📧 mohammedbilal96654@gmail.com 
-🌐 https://mohammedbilal.vercel.app/
+If this helped you or inspired you, give it a star ⭐ and share with others!
 
----
-
-> Give ⭐️ if you like this project!
-
-```
+> Empower your resume with AI. Get smarter job matches with **CV Sensei**.
 
 ---
 
-Would you like me to generate this as a `.md` file or personalize it more (e.g., name, GitHub link, branding name like "CV Sensei" vs "ResumeMate")?
-```
+© 2025 Mohammed Bilal – All Rights Reserved. Licensed under MIT.
