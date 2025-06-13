@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## 🧰 Tech Stack Used
 
 | Tool/Library                          | Purpose                                                                 |
